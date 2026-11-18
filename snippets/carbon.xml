@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="carbon"
+           fetch="https://github.com/CarbonOS-ROM"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/1.0" />
+
+  <remote  name="carbon-device"
+           fetch="https://github.com/CarbonOS-Devices"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/1.0" />
+  
+  <remote  name="gitlab"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://gitlab.com" />
+
+  <remote  name="github-non-los"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://github.com" />
+           
+  <remote  name="evo"
+           fetch="https://github.com/Evolution-X"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/cnb" />
+
+  <remote  name="carbon-codeberg"
+           fetch="https://codeberg.org/RandomDev850"
+           sync-c="true"
+           sync-j="4"
+           depth="1"
+           revision="refs/heads/1.0" />
+
+
+   <!-- Art -->
+  <project path="art" name="art" groups="pdk" remote="carbon" />
+
+  <!-- Bionic -->
+  <project path="bionic" name="bionic" groups="pdk" remote="carbon" />
+
+  <!-- Bootable -->
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="carbon" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="carbon" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" groups="pdk,sysui-studio" remote="carbon" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="carbon" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="carbon" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="carbon" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="carbon" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="carbon" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk,sysui-studio" remote="carbon" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="carbon" />
+
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="carbon" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="carbon" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="carbon" />
+
+  <!-- Kernel -->
+  <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="carbon" />
+
+  <!-- LineageOS additions -->
+  <project path="lineage-sdk" name="lineage-sdk" remote="carbon" />
+
+  <project path="carbon-maintainers" name="carbon-maintainers" remote="carbon-device" />
+  
+  <!-- Packages -->
+  <project path="packages/apps/BtHelper" name="TheParasiteProject/packages_apps_BtHelper" revision="main" remote="github-non-los" />
+  <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="carbon" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="carbon" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="carbon" />
+  <project path="packages/apps/Obsidian" name="packages_apps_Obsidian" remote="carbon" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="carbon" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="carbon" />
+  <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="carbon" />
+  <project path="packages/apps/Stk" name="packages_apps_Stk" groups="apps_stk,pdk-fs" remote="carbon" />
+  <project path="packages/modules/Permission" name="packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="carbon" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="carbon" />
+  <project path="packages/providers/ContactsProvider" name="packages_providers_ContactsProvider" groups="pdk-cw-fs,pdk-fs" remote="carbon" />
+  
+  <!-- Sepolicy -->
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="carbon" />
+
+  <!-- System -->
+  <project path="system/bpf" name="system_bpf" groups="pdk" remote="carbon" />
+  <project path="system/core" name="system_core" groups="pdk" remote="carbon" />
+  <project path="system/libhwbinder" name="system_libhwbinder" groups="pdk" remote="carbon" />
+  <project path="system/media" name="system_media" groups="pdk" remote="carbon" />
+  <project path="system/memory/libmeminfo" name="system_memory_libmeminfo" groups="pdk" remote="carbon" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="carbon" />
+  <project path="system/memory/libion" name="system_memory_libion" groups="pdk" remote="carbon" />  
+
+  <!-- Vendor -->
+  <project path="vendor/extras" name="vendor_extras" remote="carbon" />
+  <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="carbon" />
+  <project path="vendor/lineage" name="vendor_carbon" remote="carbon" />
+  <project path="vendor/gms" name="vendor_gms" remote="carbon-codeberg" />
+</manifest>

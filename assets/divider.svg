@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 24" width="900" height="24" role="img" aria-label="divider">
+  <defs>
+    <linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#00E5C7" stop-opacity="0"/><stop offset="1" stop-color="#00E5C7" stop-opacity=".55"/></linearGradient>
+    <linearGradient id="r" x1="1" x2="0"><stop offset="0" stop-color="#00E5C7" stop-opacity="0"/><stop offset="1" stop-color="#00E5C7" stop-opacity=".55"/></linearGradient>
+  </defs>
+  <style>
+    .side { transform-box:fill-box; animation:grow 1.1s cubic-bezier(.22,1,.36,1) backwards; }
+    .left { transform-origin:right; } .right { transform-origin:left; }
+    .hx { fill:none; stroke:#00E5C7; stroke-width:2.4; stroke-linejoin:round; transform-box:fill-box; transform-origin:center;
+           animation:spin 8s linear infinite; }
+    .p { fill:none; stroke:#00E5C7; stroke-width:2; stroke-linecap:round; stroke-dasharray:40 900;
+          animation:travel 3.2s ease-in-out 1.2s infinite backwards; }
+    .p2 { animation-direction:reverse; }
+    @keyframes grow   { from { transform:scaleX(0); } }
+    @keyframes spin   { to { transform:rotate(360deg); } }
+    @keyframes travel { from { stroke-dashoffset:40; } to { stroke-dashoffset:-440; } }
+    @media (prefers-reduced-motion: reduce) { * { animation:none !important; } }
+  </style>
+  <rect class="side left" x="0" y="11.5" width="430" height="1" fill="url(#l)"/>
+  <rect class="side right" x="470" y="11.5" width="430" height="1" fill="url(#r)"/>
+  <path class="p" d="M0,12 H430"/>
+  <path class="p p2" d="M470,12 H900"/>
+  <path class="hx" d="M450.0,4.0 L456.9,8.0 L456.9,16.0 L450.0,20.0 L443.1,16.0 L443.1,8.0 Z"/>
+</svg>

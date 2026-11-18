@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 70" width="600" height="70" role="img" aria-label="Forged Under Pressure">
+  <title>Forged Under Pressure</title>
+  <defs><clipPath id="c"><rect class="rev" x="100" y="0" width="400" height="70"/></clipPath></defs>
+  <style>
+    .txt { fill:#ffffff; }
+    .sub { fill:#768390; }
+    @media (prefers-reduced-motion: reduce) { * { animation:none !important; } }
+    .rev { animation:reveal 1.4s cubic-bezier(.65,0,.35,1) .3s backwards; }
+    .tg  { font:italic 600 30px -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; letter-spacing:1px; }
+    .ln  { transform-box:fill-box; transform-origin:center; animation:grow 1s cubic-bezier(.22,1,.36,1) 1.8s backwards; }
+    @keyframes reveal { from { width:0; } }
+    @keyframes grow   { from { transform:scaleX(0); } }
+  </style>
+  <g clip-path="url(#c)">
+    <text class="tg sub" x="300" y="40" text-anchor="middle">Forged Under Pressure</text>
+  </g>
+  <rect class="ln" x="250" y="58" width="100" height="3" rx="1.5" fill="#00E5C7"/>
+</svg>

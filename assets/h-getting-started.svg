@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 56" width="720" height="56" role="img" aria-label="Getting Started">
+  <title>Getting Started</title>
+  <defs>
+    <linearGradient id="u" x1="0" x2="1"><stop offset="0" stop-color="#00E5C7"/><stop offset="1" stop-color="#00E5C7" stop-opacity="0"/></linearGradient>
+  </defs>
+  <style>
+    .txt { fill:#ffffff; }
+    .sub { fill:#768390; }
+    @media (prefers-reduced-motion: reduce) { * { animation:none !important; } }
+    .h { fill:none; stroke:#00E5C7; stroke-width:3; stroke-linejoin:round; stroke-dasharray:90;
+          animation:draw .9s cubic-bezier(.65,0,.35,1) backwards; }
+    .n { fill:#00E5C7; transform-box:fill-box; transform-origin:center;
+          animation-name:pop,shimmer; animation-duration:.35s,2.4s;
+          animation-timing-function:cubic-bezier(.34,1.56,.64,1),ease-in-out;
+          animation-iteration-count:1,infinite; animation-fill-mode:backwards,none; }
+    .t { font:700 24px -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; animation:slide .7s cubic-bezier(.22,1,.36,1) .45s backwards; }
+    .u { transform-box:fill-box; transform-origin:left;
+          animation:grow 1s cubic-bezier(.22,1,.36,1) .8s backwards; }
+    @keyframes draw  { from { stroke-dashoffset:90; } }
+    @keyframes pop   { from { transform:scale(0); } }
+    @keyframes shimmer { 0%,100% { fill:#00E5C7; } 50% { fill:#ffffff; } }
+    @keyframes slide { from { opacity:0; transform:translateX(-14px); } }
+    @keyframes grow  { from { transform:scaleX(0); } }
+  </style>
+  <rect width="720" height="56" rx="14" fill="#000"/>
+  <g transform="translate(6,2)">
+  <path class="h" d="M26.0,11.0 L39.0,18.5 L39.0,33.5 L26.0,41.0 L13.0,33.5 L13.0,18.5 Z"/>
+  <circle class="n" style="animation-delay:0.35s,1.8s" cx="26.0" cy="11.0" r="3.6"/><circle class="n" style="animation-delay:0.42s,2.2s" cx="39.0" cy="18.5" r="3.6"/><circle class="n" style="animation-delay:0.49s,2.6s" cx="39.0" cy="33.5" r="3.6"/><circle class="n" style="animation-delay:0.56s,3.0s" cx="26.0" cy="41.0" r="3.6"/><circle class="n" style="animation-delay:0.63s,3.4s" cx="13.0" cy="33.5" r="3.6"/><circle class="n" style="animation-delay:0.70s,3.8s" cx="13.0" cy="18.5" r="3.6"/>
+  </g>
+  <text class="t txt" x="60" y="37">Getting Started</text>
+  <rect class="u" x="60" y="46" width="640" height="2" rx="1" fill="url(#u)"/>
+</svg>
